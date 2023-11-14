@@ -64,7 +64,11 @@ body {
 /* Main */
 main {
   min-height: calc(100vh - calc((100 / 16) * 1rem));
-  padding: calc((30 / 16) * 1rem) calc((15 / 16) * 1rem);
+  padding: calc((80 / 16) * 1rem) calc((30 / 16) * 1rem);
+}
+
+.grid-container {
+  width: 100%;
 }
 
 /* Footer */
