@@ -70,6 +70,7 @@ main {
 }
 
 .grid-container {
+  max-width: calc((400 / 16) * 1rem);
   width: 100%;
 
   display: grid;
@@ -122,6 +123,7 @@ main {
 }
 
 .previous {
+  text-align: right;
   font-size: calc((15 / 16) * 1rem);
   color: var(--pale-blue);
   font-weight: 400;
