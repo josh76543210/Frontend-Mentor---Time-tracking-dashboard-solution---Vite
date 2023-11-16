@@ -43,12 +43,10 @@ Users should be able to:
 
 ### What I learned
 
-Setting up Vite for a Vanilla Javascript program:
+Using JavaScript Modules to import JSON data:
 
-```json
-  "devDependencies": {
-    "vite": "^4.4.5"
-  }
+```javascript
+import fileData from "../json/data.json";
 ```
 
 ## Author
