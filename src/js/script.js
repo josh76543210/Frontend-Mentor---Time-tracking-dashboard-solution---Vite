@@ -1,10 +1,10 @@
 import "../css/reset.css";
 import "../css/style.css";
 import "../css/queries.css";
+import fileData from "../json/data.json";
 
 ////////////////////////////
 // Variables
-// let work, play, study, exercise, social, selfCare;
 
 ////////////////////////////
 // Elements
@@ -48,51 +48,36 @@ ellipsisEls.forEach((el) =>
 
 // load weekly data when page loads
 window.addEventListener("load", async () => {
-  // get data
-  const reportData = await getData();
   // display data
-  displayData(reportData, "weekly");
+  displayData(fileData, "weekly");
 });
 
 // load weekly data when button is clicked
 weeklyBtn.addEventListener("click", async (e) => {
-  // get data
-  const reportData = await getData();
   // display data
-  displayData(reportData, "weekly");
+  displayData(fileData, "weekly");
   // toggle buttons active state
   toggleBtns(e.target);
 });
 
 // load daily data when button is clicked
 dailyBtn.addEventListener("click", async (e) => {
-  // get data
-  const reportData = await getData();
   // display data
-  displayData(reportData, "daily");
+  displayData(fileData, "daily");
   // toggle buttons active state
   toggleBtns(e.target);
 });
 
 // load monthly data when button is clicked
 monthlyBtn.addEventListener("click", async (e) => {
-  // get data
-  const reportData = await getData();
   // display data
-  displayData(reportData, "monthly");
+  displayData(fileData, "monthly");
   // toggle buttons active state
   toggleBtns(e.target);
 });
 
 ////////////////////////////
 // Functions
-// get json data
-async function getData() {
-  const res = await fetch("../json/data.json");
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
 
 // define data and display it to the DOM based on certain timeframe
 function displayData(data, timeframe) {
